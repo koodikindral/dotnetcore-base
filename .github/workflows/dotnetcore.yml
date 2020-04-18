@@ -8,9 +8,7 @@ on:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
-
     steps:
     - uses: actions/checkout@v2
     - name: Setup .NET Core
@@ -19,7 +17,7 @@ jobs:
         dotnet-version: 3.1.101
         source-url: https://nuget.pkg.github.com/koodikindral/index.json
       env:
-        NUGET_AUTH_TOKEN: ${{secrets.NUGET_TOKEN}}
+        NUGET_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
     - name: Install dependencies
       run: dotnet restore
     - name: Build
@@ -27,6 +25,11 @@ jobs:
     - name: Test
       run: dotnet test --no-restore --verbosity normal
     - name: Create the package
-      run: dotnet pack --configuration Release Extensions
-    - name: Publish the package to GPR
-      run: dotnet nuget push Extensions/bin/Release/*.nupkg
+      run: dotnet pack --configuration Release
+    - name: Publish Extensions
+      run: 
+        dotnet nuget push BLL/bin/Release/*.nupkg --skip-duplicate
+        dotnet nuget push DAL/bin/Release/*.nupkg --skip-duplicate
+        dotnet nuget push Domain/bin/Release/*.nupkg --skip-duplicate
+        dotnet nuget push Extensions/bin/Release/*.nupkg --skip-duplicate
+
