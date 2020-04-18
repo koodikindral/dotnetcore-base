@@ -15,10 +15,6 @@ jobs:
       uses: actions/setup-dotnet@v1
       with:
         dotnet-version: 3.1.101
-    - name: Set environment
-      run: echo ::set-env name=workspace::$GITHUB_WORKSPACE
-    - name: Setup nuget config
-      run: sed 's/GITHUB_TOKEN/${{ secrets.GITHUB_TOKEN }}/g' "${{ env.workspace }}/nuget.config" > nuget.config
     - name: Install dependencies
       run: dotnet restore
     - name: Build
