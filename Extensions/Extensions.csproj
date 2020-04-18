@@ -6,7 +6,7 @@
         <Title>Extensions</Title>
         <Authors>koodikindral</Authors>
         <Description>Base Extensions</Description>
-        <PackageVersion>1.0.2</PackageVersion>
+        <PackageVersion>1.0.3</PackageVersion>
         <PackageId>Koodikindral.DotnetCore.Base.Extensions</PackageId>
     </PropertyGroup>
 
