@@ -6,6 +6,7 @@
         <Title>Extensions</Title>
         <Authors>koodikindral</Authors>
         <Description>Base Extensions</Description>
+        <PackageVersion>1.0.1</PackageVersion>
     </PropertyGroup>
 
     <ItemGroup>

@@ -6,6 +6,7 @@
         <Title>DAL</Title>
         <Authors>koodikindral</Authors>
         <Description>Base DAL</Description>
+        <PackageVersion>1.0.1</PackageVersion>
     </PropertyGroup>
 
     <ItemGroup>
