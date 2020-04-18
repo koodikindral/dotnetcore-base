@@ -2,6 +2,10 @@
 
     <PropertyGroup>
         <TargetFramework>netstandard2.1</TargetFramework>
+        <RepositoryUrl>https://github.com/koodikindral/dotnetcore-base</RepositoryUrl>
+        <Title>Extensions</Title>
+        <Authors>koodikindral</Authors>
+        <Description>Base Extensions</Description>
     </PropertyGroup>
 
     <ItemGroup>
