@@ -15,6 +15,7 @@ jobs:
       uses: actions/setup-dotnet@v1
       with:
         dotnet-version: 3.1.101
+        NUGET_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
     - name: Install dependencies
       run: dotnet restore
     - name: Build
@@ -26,24 +27,24 @@ jobs:
     - name: Publish BLL
       run: 
         dotnet nuget push BLL/bin/Release/*.nupkg 
-          --api-key ${{secrets.NUGET_TOKEN}}
+          --api-key $NUGET_AUTH_TOKEN
           --source https://nuget.pkg.github.com/koodikindral/index.json
           --skip-duplicate
     - name: Publish DAL
       run: 
         dotnet nuget push DAL/bin/Release/*.nupkg 
-          --api-key ${{secrets.GITHUB_TOKEN}}
+          --api-key $NUGET_AUTH_TOKEN
           --source https://nuget.pkg.github.com/koodikindral/index.json
           --skip-duplicate
     - name: Publish Domain
       run: 
         dotnet nuget push Domain/bin/Release/*.nupkg 
-          --api-key ${{secrets.NUGET_TOKEN}}
+          --api-key $NUGET_AUTH_TOKEN
           --source https://nuget.pkg.github.com/koodikindral/index.json
           --skip-duplicate
     - name: Publish Extensions
       run: 
         dotnet nugetpush Extensions/bin/Release/*.nupkg 
-          --api-key ${{secrets.NUGET_TOKEN}}
+          --api-key $NUGET_AUTH_TOKEN
           --source https://nuget.pkg.github.com/koodikindral/index.json
           --skip-duplicate
