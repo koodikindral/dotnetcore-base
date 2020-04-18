@@ -27,4 +27,4 @@ jobs:
       run: 
         dotnet nuget push BLL/bin/Release/*.nupkg --source "https://nuget.pkg.github.com/koodikindral/index.json" --api-key ${NUGET_TOKEN} --skip-duplicate
       env: 
-        NUGET_TOKEN: ${{secrets.GITHUB_TOKEN}}
+        NUGET_TOKEN: ${{secrets.NUGET_TOKEN}}
