@@ -15,6 +15,9 @@ jobs:
       uses: actions/setup-dotnet@v1
       with:
         dotnet-version: 3.1.101
+        source-url: https://nuget.pkg.github.com/koodikindral/index.json
+      env:
+        NUGET_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
     - name: Install dependencies
       run: dotnet restore
     - name: Build
@@ -27,4 +30,4 @@ jobs:
       env: 
         NUGET_TOKEN: ${{ secrets.NUGET_TOKEN }}
       run: 
-        dotnet nuget push -s https://nuget.pkg.github.com/koodikindral -k $NUGET_TOKEN ./packages/*.nupkg
+        dotnet nuget push ./packages/*.nupkg
