@@ -27,7 +27,5 @@ jobs:
     - name: Create the package
       run: dotnet pack --configuration Release -o "./packages"
     - name: Publish BLL
-      env: 
-        NUGET_TOKEN: ${{ secrets.NUGET_TOKEN }}
       run: 
         dotnet nuget push ./packages/*.nupkg --skip-duplicate
