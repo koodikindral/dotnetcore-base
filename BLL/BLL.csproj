@@ -2,6 +2,10 @@
 
     <PropertyGroup>
         <TargetFramework>netstandard2.1</TargetFramework>
+        <RepositoryUrl>https://github.com/koodikindral/dotnetcore-base</RepositoryUrl>
+        <Title>BLL</Title>
+        <Authors>koodikindral</Authors>
+        <Description>Base BLL</Description>
     </PropertyGroup>
 
     <ItemGroup>
