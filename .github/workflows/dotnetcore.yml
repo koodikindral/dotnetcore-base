@@ -25,4 +25,4 @@ jobs:
       run: dotnet pack --configuration Release -o "./packages"
     - name: Publish BLL
       run: 
-        dotnet nuget push -s https://nuget.pkg.github.com/koodikindral -k ${{secrets.NUGET_TOKEN}} ./packages/*.nupkg
+        dotnet nuget push -s https://nuget.pkg.github.com/koodikindral -k ${secrets.NUGET_TOKEN} ./packages/*.nupkg
