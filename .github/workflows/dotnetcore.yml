@@ -27,14 +27,14 @@ jobs:
       run: dotnet pack --configuration Release
     - name: Publish BLL
       run: 
-        dotnet nuget push BLL/bin/Release/*.nupkg --skip-duplicate --source https://nuget.pkg.github.com/koodikindral/index.json
+        dotnet nuget setapikey ${{secrets.GITHUB_TOKEN}} push BLL/bin/Release/*.nupkg --skip-duplicate --source https://nuget.pkg.github.com/koodikindral/index.json
     - name: Publish DAL
       run: 
-        dotnet nuget push DAL/bin/Release/*.nupkg --skip-duplicate --source https://nuget.pkg.github.com/koodikindral/index.json
+        dotnet nuget setapikey ${{secrets.GITHUB_TOKEN}} push DAL/bin/Release/*.nupkg --skip-duplicate --source https://nuget.pkg.github.com/koodikindral/index.json
     - name: Publish Domain
       run: 
-        dotnet nuget push Domain/bin/Release/*.nupkg --skip-duplicate --source https://nuget.pkg.github.com/koodikindral/index.json
+        dotnet nuget setapikey ${{secrets.GITHUB_TOKEN}} push Domain/bin/Release/*.nupkg --skip-duplicate --source https://nuget.pkg.github.com/koodikindral/index.json
     - name: Publish Extensions
       run: 
-        dotnet nuget push Extensions/bin/Release/*.nupkg --skip-duplicate --source https://nuget.pkg.github.com/koodikindral/index.json
+        dotnet nuget setapikey ${{secrets.GITHUB_TOKEN}} push Extensions/bin/Release/*.nupkg --skip-duplicate --source https://nuget.pkg.github.com/koodikindral/index.json
 
