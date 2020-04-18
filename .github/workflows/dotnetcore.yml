@@ -25,13 +25,6 @@ jobs:
       run: dotnet pack --configuration Release
     - name: Publish BLL
       run: 
-        dotnet nuget push BLL/bin/Release/*.nupkg -s "github" -k ${{secrets.GITHUB_TOKEN}} --skip-duplicate
-    - name: Publish DAL
-      run: 
-        dotnet nuget push DAL/bin/Release/*.nupkg -s "github" -k ${{secrets.GITHUB_TOKEN}} --skip-duplicate
-    - name: Publish Domain
-      run: 
-        dotnet nuget push Domain/bin/Release/*.nupkg -s "github" -k ${{secrets.GITHUB_TOKEN}} --skip-duplicate
-    - name: Publish Extensions
-      run: 
-        dotnet nuget push Extensions/bin/Release/*.nupkg -s "github" -k ${{secrets.GITHUB_TOKEN}} --skip-duplicate
+        dotnet nuget push BLL/bin/Release/*.nupkg --source "https://nuget.pkg.github.com/koodikindral/index.json" --api-key ${NUGET_TOKEN} --skip-duplicate
+      env: 
+        NUGET_TOKEN: ${{secrets.GITHUB_TOKEN}}
