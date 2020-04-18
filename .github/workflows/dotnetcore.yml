@@ -26,9 +26,8 @@ jobs:
       run: dotnet pack --configuration Release
     - name: Publish BLL
       run: 
-        dotnet nuget push BLL/bin/Release/*.nupkg 
+        dotnet nuget push BLL/bin/Release/*.nupkg -s https://nuget.pkg.github.com/koodikindral/index.json
           --api-key $NUGET_AUTH_TOKEN
-          --source https://nuget.pkg.github.com/koodikindral/index.json
           --skip-duplicate
     - name: Publish DAL
       run: 
@@ -37,11 +36,11 @@ jobs:
           --skip-duplicate
     - name: Publish Domain
       run: 
-        dotnet nuget push DAL/bin/Release/*.nupkg -s https://nuget.pkg.github.com/koodikindral/index.json
+        dotnet nuget push Domain/bin/Release/*.nupkg -s https://nuget.pkg.github.com/koodikindral/index.json
           --api-key $NUGET_AUTH_TOKEN
           --skip-duplicate
     - name: Publish Extensions
       run: 
-        dotnet nuget push DAL/bin/Release/*.nupkg -s https://nuget.pkg.github.com/koodikindral/index.json
+        dotnet nuget push Extensions/bin/Release/*.nupkg -s https://nuget.pkg.github.com/koodikindral/index.json
           --api-key $NUGET_AUTH_TOKEN
           --skip-duplicate
