@@ -25,7 +25,12 @@ jobs:
     - name: Test
       run: dotnet test --no-restore --verbosity normal
     - name: Create the package
-      run: dotnet pack --configuration Release -o "./packages"
+      run: dotnet pack --configuration Release
     - name: Publish BLL
-      run: 
-        dotnet nuget push ./packages/*.nupkg --skip-duplicate --no-symbols true
+      run: dotnet nuget push BLL/bin/Release/*.nupkg --skip-duplicate --no-symbols true
+    - name: Publish DAL
+      run: dotnet nuget push DAL/bin/Release/*.nupkg --skip-duplicate --no-symbols true
+    - name: Publish Domain
+      run: dotnet nuget push Domain/bin/Release/*.nupkg --skip-duplicate --no-symbols true
+    - name: Publish Extensions
+      run: dotnet nuget push Extensions/bin/Release/*.nupkg --skip-duplicate --no-symbols true
