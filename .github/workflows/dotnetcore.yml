@@ -26,10 +26,16 @@ jobs:
       run: dotnet test --no-restore --verbosity normal
     - name: Create the package
       run: dotnet pack --configuration Release
-    - name: Publish Extensions
+    - name: Publish BLL
       run: 
         dotnet nuget push BLL/bin/Release/*.nupkg --skip-duplicate
+    - name: Publish DAL
+      run: 
         dotnet nuget push DAL/bin/Release/*.nupkg --skip-duplicate
+    - name: Publish Domain
+      run: 
         dotnet nuget push Domain/bin/Release/*.nupkg --skip-duplicate
+    - name: Publish Extensions
+      run: 
         dotnet nuget push Extensions/bin/Release/*.nupkg --skip-duplicate
 
