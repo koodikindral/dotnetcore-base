@@ -15,7 +15,6 @@ jobs:
       uses: actions/setup-dotnet@v1
       with:
         dotnet-version: 3.1.101
-        source-url: https://nuget.pkg.github.com/koodikindral/index.json
       env:
         NUGET_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
     - name: Install dependencies
@@ -28,14 +27,14 @@ jobs:
       run: dotnet pack --configuration Release
     - name: Publish BLL
       run: 
-        dotnet nuget push BLL/bin/Release/*.nupkg --skip-duplicate
+        dotnet nuget push BLL/bin/Release/*.nupkg --skip-duplicate --source https://nuget.pkg.github.com/koodikindral/index.json
     - name: Publish DAL
       run: 
-        dotnet nuget push DAL/bin/Release/*.nupkg --skip-duplicate
+        dotnet nuget push DAL/bin/Release/*.nupkg --skip-duplicate --source https://nuget.pkg.github.com/koodikindral/index.json
     - name: Publish Domain
       run: 
-        dotnet nuget push Domain/bin/Release/*.nupkg --skip-duplicate
+        dotnet nuget push Domain/bin/Release/*.nupkg --skip-duplicate --source https://nuget.pkg.github.com/koodikindral/index.json
     - name: Publish Extensions
       run: 
-        dotnet nuget push Extensions/bin/Release/*.nupkg --skip-duplicate
+        dotnet nuget push Extensions/bin/Release/*.nupkg --skip-duplicate --source https://nuget.pkg.github.com/koodikindral/index.json
 
