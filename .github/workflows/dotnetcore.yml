@@ -28,4 +28,4 @@ jobs:
       run: dotnet pack --configuration Release -o "./packages"
     - name: Publish BLL
       run: 
-        dotnet nuget push ./packages/*.nupkg --skip-duplicate
+        dotnet nuget push ./packages/*.nupkg --skip-duplicate --no-symbols true
