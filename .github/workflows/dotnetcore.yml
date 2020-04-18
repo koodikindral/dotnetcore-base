@@ -32,19 +32,16 @@ jobs:
           --skip-duplicate
     - name: Publish DAL
       run: 
-        dotnet nuget push DAL/bin/Release/*.nupkg 
+        dotnet nuget push DAL/bin/Release/*.nupkg -s https://nuget.pkg.github.com/koodikindral/index.json
           --api-key $NUGET_AUTH_TOKEN
-          --source https://nuget.pkg.github.com/koodikindral/index.json
           --skip-duplicate
     - name: Publish Domain
       run: 
-        dotnet nuget push Domain/bin/Release/*.nupkg 
+        dotnet nuget push DAL/bin/Release/*.nupkg -s https://nuget.pkg.github.com/koodikindral/index.json
           --api-key $NUGET_AUTH_TOKEN
-          --source https://nuget.pkg.github.com/koodikindral/index.json
           --skip-duplicate
     - name: Publish Extensions
       run: 
-        dotnet nugetpush Extensions/bin/Release/*.nupkg 
+        dotnet nuget push DAL/bin/Release/*.nupkg -s https://nuget.pkg.github.com/koodikindral/index.json
           --api-key $NUGET_AUTH_TOKEN
-          --source https://nuget.pkg.github.com/koodikindral/index.json
           --skip-duplicate
