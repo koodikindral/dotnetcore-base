@@ -1,8 +1,8 @@
-using DotnetCore.Base.BLL.Interface.Mappers;
+using DotnetCore.Base.DAL.Interface.Mappers;
 
-namespace DotnetCore.Base.BLL.Mappers
+namespace DotnetCore.Base.DAL.EF.Mappers
 {
-    public class IdentityMapper<TInObject, TOutObject> : IBaseBLLMapper<TInObject, TOutObject>
+    public class IdentityMapper<TInObject, TOutObject> : IBaseDALMapper<TInObject, TOutObject>
         where TInObject : class, new()
         where TOutObject : class, new()
     {
@@ -11,8 +11,7 @@ namespace DotnetCore.Base.BLL.Mappers
             return inObject as TOutObject ?? default!;
         }
 
-        public TMapOutObject Map<TMapInObject, TMapOutObject>(TMapInObject inObject)
-            where TMapInObject : class, new()
+        public TMapOutObject Map<TMapInObject, TMapOutObject>(TMapInObject inObject) where TMapInObject : class
             where TMapOutObject : class, new()
         {
             return inObject as TMapOutObject ?? default!;

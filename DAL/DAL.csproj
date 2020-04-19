@@ -6,13 +6,15 @@
         <Title>DAL</Title>
         <Authors>koodikindral</Authors>
         <Description>Base DAL</Description>
-        <PackageVersion>1.0.0</PackageVersion>
+        <PackageVersion>1.0.1</PackageVersion>
         <RootNamespace>DotnetCore.Base.DAL</RootNamespace>
         <PackageId>DotnetCore.Base.DAL</PackageId>
         <Nullable>enable</Nullable>
     </PropertyGroup>
 
     <ItemGroup>
+        <PackageReference Include="AutoMapper" Version="9.0.0" />
+        <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="3.1.3" />
         <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.3" />
     </ItemGroup>
 

@@ -1,13 +1,13 @@
-namespace DotnetCore.Base.BLL.Mappers
+namespace DotnetCore.Base.DAL.Interface.Mappers
 {
-    public interface IBaseBLLMapper<TInObject, TOutObject>
+    public interface IBaseDALMapper<in TInObject, out TOutObject>
         where TOutObject : class, new()
-        where TInObject : class, new()
+        where TInObject : class
     {
         TOutObject Map(TInObject inObject);
 
         TMapOutObject Map<TMapInObject, TMapOutObject>(TMapInObject inObject)
             where TMapOutObject : class, new()
-            where TMapInObject : class, new();
+            where TMapInObject : class;
     }
 }

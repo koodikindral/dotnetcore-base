@@ -6,7 +6,7 @@
         <Title>BLL</Title>
         <Authors>koodikindral</Authors>
         <Description>Base BLL</Description>
-        <PackageVersion>1.0.0</PackageVersion>
+        <PackageVersion>1.0.1</PackageVersion>
         <RootNamespace>DotnetCore.Base.BLL</RootNamespace>
         <PackageId>DotnetCore.Base.BLL</PackageId>
         <Nullable>enable</Nullable>

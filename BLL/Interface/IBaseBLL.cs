@@ -1,7 +1,7 @@
 using System;
 using System.Threading.Tasks;
 
-namespace DotnetCore.Base.BLL
+namespace DotnetCore.Base.BLL.Interface
 {
     public interface IBaseBLL
     {

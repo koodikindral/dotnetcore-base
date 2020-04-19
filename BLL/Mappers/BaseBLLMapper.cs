@@ -1,4 +1,5 @@
 using AutoMapper;
+using DotnetCore.Base.BLL.Interface.Mappers;
 
 namespace DotnetCore.Base.BLL.Mappers
 {

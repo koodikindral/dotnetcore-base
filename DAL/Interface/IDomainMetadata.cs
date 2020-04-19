@@ -1,6 +1,6 @@
 using System;
 
-namespace DotnetCore.Base.Domain
+namespace DotnetCore.Base.DAL.Interface
 {
     public interface IDomainEntityMetadata
     {
@@ -10,7 +10,11 @@ namespace DotnetCore.Base.Domain
         public string? ChangedBy { get; set; }
         public DateTime ChangedAt { get; set; }
 
+
+        /* NO SOFT UPDATES/DELETES initially
         public string? DeletedBy { get; set; }
+        
         public DateTime? DeletedAt { get; set; }
+        */
     }
 }
