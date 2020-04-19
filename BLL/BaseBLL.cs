@@ -1,7 +1,8 @@
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using DotnetCore.Base.DAL;
+using DotnetCore.Base.BLL.Interface;
+using DotnetCore.Base.DAL.Interface;
 
 namespace DotnetCore.Base.BLL
 {
