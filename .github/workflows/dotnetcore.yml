@@ -30,7 +30,5 @@ jobs:
       run: dotnet nuget push BLL/bin/Release/*.nupkg --skip-duplicate --no-symbols true
     - name: Publish DAL
       run: dotnet nuget push DAL/bin/Release/*.nupkg --skip-duplicate --no-symbols true
-    - name: Publish Domain
-      run: dotnet nuget push Domain/bin/Release/*.nupkg --skip-duplicate --no-symbols true
     - name: Publish Extensions
       run: dotnet nuget push Extensions/bin/Release/*.nupkg --skip-duplicate --no-symbols true
