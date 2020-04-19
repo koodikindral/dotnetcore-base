@@ -2,10 +2,10 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Domain;
+using DotnetCore.Base.Domain;
 using Microsoft.EntityFrameworkCore;
 
-namespace DAL.Repositories
+namespace DotnetCore.Base.DAL.Repositories
 {
     public class BaseRepository<TEntity, TDbContext> : BaseRepository<TEntity, Guid, TDbContext>
         where TEntity : class, IDomainEntity<Guid>, new()
@@ -36,7 +36,7 @@ namespace DAL.Repositories
 
         public IEnumerable<TEntity> All()
         {
-            return RepoDbSet.Where(e => e.DeletedBy.Equals(null)).ToList();
+            return RepoDbSet.ToList();
         }
 
         public async Task<IEnumerable<TEntity>> AllAsync()

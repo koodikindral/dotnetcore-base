@@ -6,7 +6,10 @@
         <Title>Domain</Title>
         <Authors>koodikindral</Authors>
         <Description>Base Domain</Description>
-        <PackageVersion>1.0.1</PackageVersion>
+        <PackageVersion>1.0.0</PackageVersion>
+        <RootNamespace>DotnetCore.Base.Domain</RootNamespace>
+        <PackageId>DotnetCore.Base.Domain</PackageId>
+        <Nullable>enable</Nullable>
     </PropertyGroup>
 
 </Project>

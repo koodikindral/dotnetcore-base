@@ -1,8 +1,8 @@
 using System;
-using DAL.Repositories;
-using Domain;
+using DotnetCore.Base.DAL.Repositories;
+using DotnetCore.Base.Domain;
 
-namespace BLL.Services
+namespace DotnetCore.Base.BLL.Services
 {
     public interface IBaseService
     {

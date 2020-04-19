@@ -1,6 +1,6 @@
 using System;
 
-namespace Domain
+namespace DotnetCore.Base.Domain
 {
     public abstract class DomainEntityMetadata : IDomainEntityMetadata
     {

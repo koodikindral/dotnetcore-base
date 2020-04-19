@@ -1,4 +1,4 @@
-namespace BLL.Services
+namespace DotnetCore.Base.BLL.Services
 {
     public class BaseService : IBaseService
     {

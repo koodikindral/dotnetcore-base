@@ -6,8 +6,10 @@
         <Title>Extensions</Title>
         <Authors>koodikindral</Authors>
         <Description>Base Extensions</Description>
-        <PackageVersion>1.0.3</PackageVersion>
-        <PackageId>Koodikindral.DotnetCore.Base.Extensions</PackageId>
+        <PackageVersion>1.0.0</PackageVersion>
+        <PackageId>DotnetCore.Base.Extensions</PackageId>
+        <RootNamespace>DotnetCore.Base.Extensions </RootNamespace>
+        <Nullable>enable</Nullable>
     </PropertyGroup>
 
     <ItemGroup>

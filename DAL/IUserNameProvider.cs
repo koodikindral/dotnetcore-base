@@ -1,4 +1,4 @@
-namespace DAL
+namespace DotnetCore.Base.DAL
 {
     public interface IUserNameProvider
     {

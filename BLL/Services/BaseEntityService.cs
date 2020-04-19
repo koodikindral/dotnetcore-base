@@ -2,12 +2,12 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using BLL.Mappers;
-using DAL;
-using DAL.Repositories;
-using Domain;
+using DotnetCore.Base.BLL.Mappers;
+using DotnetCore.Base.DAL;
+using DotnetCore.Base.DAL.Repositories;
+using DotnetCore.Base.Domain;
 
-namespace BLL.Services
+namespace DotnetCore.Base.BLL.Services
 {
     public class BaseEntityService<TServiceRepository, TUnitOfWork, TDALEntity, TBLLEntity> : BaseService,
         IBaseEntityService<TBLLEntity>

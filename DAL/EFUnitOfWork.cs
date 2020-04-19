@@ -1,7 +1,7 @@
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 
-namespace DAL
+namespace DotnetCore.Base.DAL
 {
     public class EFUnitOfWork<TDbContext> : BaseUnitOfWork, IBaseUnitOfWork
         where TDbContext : DbContext

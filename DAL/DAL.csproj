@@ -6,7 +6,10 @@
         <Title>DAL</Title>
         <Authors>koodikindral</Authors>
         <Description>Base DAL</Description>
-        <PackageVersion>1.0.1</PackageVersion>
+        <PackageVersion>1.0.0</PackageVersion>
+        <RootNamespace>DotnetCore.Base.DAL</RootNamespace>
+        <PackageId>DotnetCore.Base.DAL</PackageId>
+        <Nullable>enable</Nullable>
     </PropertyGroup>
 
     <ItemGroup>

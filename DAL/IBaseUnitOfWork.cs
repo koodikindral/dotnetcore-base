@@ -1,6 +1,6 @@
 using System.Threading.Tasks;
 
-namespace DAL
+namespace DotnetCore.Base.DAL
 {
     public interface IBaseUnitOfWork
     {

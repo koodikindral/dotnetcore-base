@@ -6,7 +6,7 @@ using System.Security.Claims;
 using System.Text;
 using Microsoft.IdentityModel.Tokens;
 
-namespace Koodikindral.DotnetCore.Base.Extensions 
+namespace DotnetCore.Base.Extensions
 {
     public static class IdentityExtensions
     {
@@ -30,7 +30,6 @@ namespace Koodikindral.DotnetCore.Base.Extensions
                 return (TKey) Convert.ChangeType(new Guid(stringId), typeof(TKey));
             }
             else
-
             {
                 throw new Exception("Invalid type provided");
             }

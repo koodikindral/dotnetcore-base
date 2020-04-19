@@ -1,6 +1,6 @@
 using System;
 
-namespace Domain
+namespace DotnetCore.Base.Domain
 {
     public interface IDomainEntity : IDomainEntity<Guid>
     {

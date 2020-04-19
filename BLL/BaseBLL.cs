@@ -1,9 +1,9 @@
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using DAL;
+using DotnetCore.Base.DAL;
 
-namespace BLL
+namespace DotnetCore.Base.BLL
 {
     public class BaseBLL<TUnitOfWork> : IBaseBLL
         where TUnitOfWork : IBaseUnitOfWork

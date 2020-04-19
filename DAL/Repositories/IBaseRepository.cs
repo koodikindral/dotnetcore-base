@@ -1,9 +1,9 @@
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using Domain;
+using DotnetCore.Base.Domain;
 
-namespace DAL.Repositories
+namespace DotnetCore.Base.DAL.Repositories
 {
     public interface IBaseRepository<TEntity> : IBaseRepository<TEntity, Guid>
         where TEntity : class, IDomainEntity<Guid>, new()

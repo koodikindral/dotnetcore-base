@@ -1,6 +1,6 @@
 using AutoMapper;
 
-namespace BLL.Mappers
+namespace DotnetCore.Base.BLL.Mappers
 {
     public class BaseBLLMapper<TInObject, TOutObject> : IBaseBLLMapper<TInObject, TOutObject>
         where TInObject : class, new()
@@ -18,11 +18,16 @@ namespace BLL.Mappers
             }).CreateMapper();
         }
 
-        public TOutObj Map<TInObj, TOutObj>(TInObj inObject)
-            where TInObj : class, new()
-            where TOutObj : class, new()
+        public TOutObject Map(TInObject inObject)
         {
-            return _mapper.Map<TInObj, TOutObj>(inObject);
+            return _mapper.Map<TInObject, TOutObject>(inObject);
+        }
+
+        public TMapOutObject Map<TMapInObject, TMapOutObject>(TMapInObject inObject)
+            where TMapInObject : class, new()
+            where TMapOutObject : class, new()
+        {
+            return _mapper.Map<TMapInObject, TMapOutObject>(inObject);
         }
     }
 }
